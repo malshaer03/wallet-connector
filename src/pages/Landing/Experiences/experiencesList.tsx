@@ -19,17 +19,23 @@ export const experiencesList: IExperience[] = [
 		company: "idOS",
 		position: "Software Engineer",
 		date: {
-			from: {
-				month: "Aug",
-				year: 2024,
-			},
-			to: "Present",
+		  from: {
+			month: "Aug",
+			year: 2024,
+		  },
+		  to: "Present",
 		},
 		bullets: [
-			"Blockchain Infrastructure Provider: IDOS Network offers a decentralized platform enabling secure and efficient interactions between decentralized applications (dApps) and users across multiple blockchain networks",
-			"Advanced Security & Privacy: Focuses on secure user authentication, data storage, and encryption through protocols like Lit Protocol, ensuring privacy and compliance with decentralized standards.",
-			"Cross-Chain Compatibility: Supports multi-chain transactions and interactions, simplifying blockchain integration for developers and enterprises looking to deploy dApps across different blockchain ecosystems.",
-		],
+		  "Full-Stack Monorepo Development: Engineered cross-chain blockchain infrastructure in a TypeScript/React monorepo supporting 15+ packages and applications, implementing unified SDK architecture for Issuer, Consumer, and Client services enabling seamless decentralized identity management across Web3 ecosystem.",
+		  
+		  "Multi-Chain Signer Integration: Developed comprehensive blockchain signer support for XRP Ledger (GemWallet/Xumm), Stellar (StellarKit), and Near Protocol (wallet-selector) using Go backend with Kwil decentralized database, implementing Ed25519, NEP-413, and XRPL signature verification algorithms for secure cross-chain authentication.",
+		  
+		  "SDK Development & W3C Standards: Built three core SDK packages - Issuer SDK for creating/managing Verifiable Credentials, Consumer SDK for enterprises to verify user credentials, and Client SDK for browser-based wallet interactions - all supporting W3C Verifiable Credentials standard and end-to-end encryption protocols.",
+		  
+		  "Financial On-Ramp Integration: Integrated KYC-verified credential sharing with major fiat-to-crypto providers including Transak, Noah, and Hifi Finance, enabling seamless conversion of idOS credentials into financial services through automated customer onboarding and compliance verification workflows.",
+		  
+		  "Enterprise KYC & Compliance: Developed secure credential passporting system enabling regulated entities (banks, insurance, fintech) to share verified user data while maintaining privacy sovereignty, implementing timelock mechanisms, access grants, and revocation capabilities for GDPR/regulatory compliance."
+		]
 	},
 	{
 		company: "TaskBunny",

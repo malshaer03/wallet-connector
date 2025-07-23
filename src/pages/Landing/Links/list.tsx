@@ -44,7 +44,7 @@ export const infoLinks: ILink[] = [
     link: "https://www.npmjs.com/settings/mo-toolkit/packages",
   },
   {
-    name: "501",
+    name: "511",
     icon: (
       <img src={StackoverflowIcon} className="min-w-[24px] w-[24px] h-auto" alt="stackoverflow" />
     ),

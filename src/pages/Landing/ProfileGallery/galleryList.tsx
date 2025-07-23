@@ -6,6 +6,10 @@ import img5 from "src/assets/imgs/hord-app-img-5.png";
 import img6 from "src/assets/imgs/tokensfarm-1.png";
 import img7 from "src/assets/imgs/tokensfarm-2.png";
 import img8 from "src/assets/imgs/hord-app-img-6.png";
+import img9 from "src/assets/imgs/idos-learn-more.png";
+import img10 from "src/assets/imgs/idos-data-dashboard.png";
+import img11 from "src/assets/imgs/idos-consumer-issuer.png";
+import img12 from "src/assets/imgs/idos-neobank.png";
 
 export interface IGalleryImg {
   img: string;
@@ -15,6 +19,30 @@ export interface IGalleryImg {
 }
 
 export const galleryImgsList: IGalleryImg[] = [
+  {
+    img: img9,
+    describtion: "Learn more about idOS",
+    title: "idOS",
+    link: "https://www.idos.network/developers",
+  },
+  {
+    img: img10,
+    describtion: "idOS User Dashboard",
+    title: "idOS",
+    link: "https://dashboard.staging.idos.network/",
+  },
+  {
+    img: img11,
+    describtion: "idOS Consumer and Issuer Demo",
+    title: "idOS",
+    link: "https://consumer-and-issuer-demo.staging.idos.network/",
+  },
+  {
+    img: img12,
+    describtion: "Neobank",
+    title: "idOS",
+    link: "",
+  },
   {
     img: img3,
     describtion: "Stake ETH (unconnected)",
