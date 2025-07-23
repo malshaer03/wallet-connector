@@ -31,7 +31,7 @@ export const infoLinks: ILink[] = [
   {
     name: "CV",
     icon: <WebsiteIcon />,
-    link: "https://pink-loralie-74.tiiny.site",
+    link: "https://teal-kania-69.tiiny.site",
   },
   {
     name: "Upwork",
