@@ -1,7 +1,7 @@
 name: nodock
 # Managed by nodock. Edits are detected and surfaced in the dashboard; deleting
 # this file stops automatic deploys for every service in this repository.
-# Template version: 2. A workflow older than nodock's own is
+# Template version: 3. A workflow older than nodock's own is
 # asked to re-sync before it is sent a strategy it does not understand.
 
 on:
@@ -311,7 +311,7 @@ jobs:
         run: |
           docker buildx build --load \
             --tag "$IMAGE" \
-            --build-arg BUILDKIT_SYNTAX=ghcr.io/railwayapp/railpack:railpack-frontend \
+            --build-arg BUILDKIT_SYNTAX=ghcr.io/railwayapp/railpack-frontend:v0.0.32 \
             --cache-from type=gha --cache-to type=gha,mode=max \
             --file plan.json .
           docker push "$IMAGE"
