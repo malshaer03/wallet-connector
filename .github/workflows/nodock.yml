@@ -293,7 +293,13 @@ jobs:
       # ---- railpack: everything else, detected by Railpack --------------------
       - name: Install Railpack
         if: ${{ github.event.client_payload.strategy == 'railpack' }}
-        run: curl -sSL https://railpack.com/install.sh | sh -s -- -y
+        run: |
+          curl -sSL https://railpack.com/install.sh | sh -s -- -y
+          # The install script gives the newest CLI, so the frontend that reads its plan
+          # has to be the matching release: a plan and a frontend from different versions
+          # fail inside BuildKit with no message but the exit code.
+          RAILPACK_VERSION="$(railpack --version | grep -oE '[0-9]+\.[0-9]+\.[0-9]+' | head -n1)"
+          echo "NODOCK_RAILPACK_FRONTEND=ghcr.io/railwayapp/railpack-frontend:v${RAILPACK_VERSION:-0.43.0}" >> "$GITHUB_ENV"
 
       - name: Prepare the Railpack plan
         if: ${{ github.event.client_payload.strategy == 'railpack' }}
@@ -311,7 +317,7 @@ jobs:
         run: |
           docker buildx build --load \
             --tag "$IMAGE" \
-            --build-arg BUILDKIT_SYNTAX=ghcr.io/railwayapp/railpack-frontend:v0.0.32 \
+            --build-arg BUILDKIT_SYNTAX=${NODOCK_RAILPACK_FRONTEND} \
             --cache-from type=gha --cache-to type=gha,mode=max \
             --file plan.json .
           docker push "$IMAGE"
